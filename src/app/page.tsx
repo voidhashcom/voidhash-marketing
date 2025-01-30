@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <div className="min-w-screen md:min-h-screen">
       <main className="flex flex-col md:grid grid-cols-12 max-w-7xl md:mx-auto w-full">
-        <div className="pt-32 md:pt-0 col-span-5 border-b md:border-b-0 md:border-l md:border-r md:min-h-screen h-full border-dashed border-zinc-800 px-6 flex justify-end flex-col">
+        <div className="pt-32 md:pt-0 col-span-5 border-b md:border-b-0 md:border-l md:border-r md:min-h-screen h-full border-dashed border-zinc-800 px-10 md:px-6 flex justify-end flex-col">
           <Image src="/logo.svg" alt="voidhash logo" width={128} height={20} />
-          <h1 className="mt-8 text-white text-6xl font-semibold max-w-sm">
+          <h1 className="mt-8 text-white text-5xl md:text-6xl font-semibold max-w-sm">
             We are voidhash#
           </h1>
           {/* Socials */}
@@ -28,10 +28,10 @@ export default function Home() {
           </div>
         </div>
         <div className="col-span-6 justify-end pb-24 flex flex-col p-6 md:min-h-screen">
-          <h2 className="text-white text-xl font-semibold tracking-tight mb-4 ml-3">
+          <h2 className="text-white text-lg md:text-xl font-semibold tracking-tight mb-4 ml-3">
             Our projects
           </h2>
-          <div className="flex flex-col gap-4 bg-zinc-900/50 p-8 rounded-xl">
+          <div className="flex flex-col gap-4 bg-zinc-900/50 p-8 tracking-tight rounded-xl">
             <Image
               src="/chiron.svg"
               alt="Chiron logo"
@@ -39,7 +39,7 @@ export default function Home() {
               height={35 * 0.8}
             />
             <h3 className="sr-only">Chiron</h3>
-            <p className="text-2xl font-semibold mt-2 max-w-md">
+            <p className="text-lg md:text-2xl mt-2 max-w-md tracking-tight">
               Open-Source TypeScript subscription management library.
             </p>
             <div className="flex gap-2 mt-4">
