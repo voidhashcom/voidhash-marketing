@@ -8,8 +8,8 @@ export default function Home() {
       <main className="flex flex-col md:grid grid-cols-12 max-w-7xl md:mx-auto w-full">
         <div className="pt-32 md:pt-0 col-span-5 border-b md:border-b-0 md:border-l md:border-r md:min-h-screen h-full border-dashed border-zinc-800 px-10 md:px-6 flex justify-end flex-col">
           <Image src="/logo.svg" alt="voidhash logo" width={128} height={20} />
-          <h1 className="mt-8 text-white text-5xl md:text-6xl font-semibold max-w-sm">
-            We are voidhash#
+          <h1 className="mt-8 text-white text-5xl md:text-4xl leading-loose font-semibold max-w-sm">
+          Helping developers make more money.
           </h1>
           {/* Socials */}
           <div className="flex gap-2 mt-8 pb-20 md:pb-32 -ml-2">
@@ -39,7 +39,7 @@ export default function Home() {
               height={35 * 0.8}
             />
             <h3 className="sr-only">Chiron</h3>
-            <p className="text-lg md:text-2xl mt-2 max-w-md tracking-tight">
+            <p className="md:text-2xl mt-2 max-w-md tracking-tight">
               Open-Source TypeScript subscription management library.
             </p>
             <div className="flex gap-2 mt-4">

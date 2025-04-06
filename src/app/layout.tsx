@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { GeistSans } from 'geist/font/sans';
 import "./globals.css";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title: "voidhash#",
-  description: "We love building cool stuff.",
+  title: "Voidhash - Helping developers make more money.",
+  description: "We simplifying the process of settings up web and mobile payments in your app.",
 };
 
 export default function RootLayout({
@@ -20,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} antialiased bg-zinc-950`}>
+      <body className={`${GeistSans.className} antialiased bg-zinc-950`}>
         {children}
       </body>
     </html>
