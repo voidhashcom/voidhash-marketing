@@ -1,7 +1,7 @@
-import { ChevronRight } from "lucide-react";
-import Link from "next/link";
-import { Button } from "../button";
-import { Logo } from "../logo";
+// import { ChevronRight } from 'lucide-react';
+import Link from 'next/link';
+// import { Button } from '../button';
+import { Logo } from '../logo';
 
 export function Navigation() {
   return (
@@ -12,7 +12,7 @@ export function Navigation() {
             <Logo className="h-6" />
           </Link>
           <div className="flex-1" />
-          <div className="flex items-center gap-2">
+          {/* <div className="flex items-center gap-2">
             <Button size="sm" variant="outline">
               Log In
             </Button>
@@ -20,7 +20,7 @@ export function Navigation() {
               <span>Get Started</span>
               <ChevronRight className="size-4 opacity-50" />
             </Button>
-          </div>
+          </div> */}
         </div>
       </nav>
       <div className="h-18" />

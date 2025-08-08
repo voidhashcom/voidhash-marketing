@@ -1,9 +1,9 @@
-"use client";
-import { ChevronRight } from "lucide-react";
-import { motion } from "motion/react";
-import { Button } from "../button";
-import { RefractionStripes } from "../refraction-stripes";
-import { SectionContainer } from "../section/section-container";
+'use client';
+// import { ChevronRight } from 'lucide-react';
+import { motion } from 'motion/react';
+// import { Button } from '../button';
+import { RefractionStripes } from '../refraction-stripes';
+import { SectionContainer } from '../section/section-container';
 
 export function Hero() {
   return (
@@ -11,23 +11,22 @@ export function Hero() {
       <div />
       <section className="flex flex-col items-center justify-center pt-18">
         <div className="flex flex-col items-center justify-center">
-          <h1 className="max-w-lg text-balance text-center font-semibold text-5xl leading-tight tracking-tight">
-            In-app monetization platform for React Native
+          <h1 className="max-w-xl text-balance text-center font-semibold text-5xl leading-tight tracking-tight">
+            Subscription management platform for React Native
           </h1>
           <p className="mt-4 max-w-lg text-balance text-center text-muted-foreground">
-            Voidhash is an open-source subscription management platform for
-            React Native. Integrate Google Play and App Store in-app purchases
-            in seconds.
+            Integrate in-app purchases in seconds. Analytics, CRM, Paywalls and
+            more. All in one place, built for developers and open-source.
           </p>
           <div className="mt-8 flex items-center gap-4">
-            <Button>
+            {/* <Button>
               <span>Get Started</span>
               <ChevronRight className="size-4 opacity-50" />
             </Button>
             <Button variant="ghost">
               <span>Documentation</span>
               <ChevronRight className="size-4 opacity-50" />
-            </Button>
+            </Button> */}
           </div>
 
           {/* Illustration */}
@@ -36,7 +35,7 @@ export function Hero() {
             <motion.div
               animate={{ opacity: 1, translateY: 0 }}
               initial={{ opacity: 0, translateY: 100 }}
-              transition={{ duration: 3, ease: "easeInOut", delay: 0.1 }}
+              transition={{ duration: 3, ease: 'easeInOut', delay: 0.1 }}
             >
               <svg
                 className="w-full text-background"
@@ -132,8 +131,8 @@ export function Hero() {
                   <motion.linearGradient
                     animate={{
                       gradientTransform: [
-                        "rotate(0 0 0) translate(0 50)",
-                        "rotate(-6 0 0) translate(0 -100)",
+                        'rotate(0 0 0) translate(0 50)',
+                        'rotate(-6 0 0) translate(0 -100)',
                       ],
                       opacity: [0.7, 1],
                     }}
@@ -142,8 +141,8 @@ export function Hero() {
                     transition={{
                       duration: 3,
                       delay: 1,
-                      ease: "easeInOut",
-                      repeatType: "reverse",
+                      ease: 'easeInOut',
+                      repeatType: 'reverse',
                       repeat: Number.POSITIVE_INFINITY,
                     }}
                     x1="680.5"
@@ -169,16 +168,16 @@ export function Hero() {
                   <motion.linearGradient
                     animate={{
                       gradientTransform: [
-                        "rotate(0 0 0) translate(0 300)",
-                        "rotate(4 0 0) translate(0 -100)",
+                        'rotate(0 0 0) translate(0 300)',
+                        'rotate(4 0 0) translate(0 -100)',
                       ],
                     }}
                     gradientUnits="userSpaceOnUse"
                     id="paint2_linear_1135_42"
                     transition={{
                       duration: 4,
-                      ease: "easeInOut",
-                      repeatType: "reverse",
+                      ease: 'easeInOut',
+                      repeatType: 'reverse',
                       repeat: Number.POSITIVE_INFINITY,
                     }}
                     x1="635.277"
