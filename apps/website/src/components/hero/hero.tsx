@@ -1,6 +1,7 @@
 'use client';
 // import { ChevronRight } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Button } from '../button';
 // import { Button } from '../button';
 import { RefractionStripes } from '../refraction-stripes';
 import { SectionContainer } from '../section/section-container';
@@ -8,17 +9,44 @@ import { SectionContainer } from '../section/section-container';
 export function Hero() {
   return (
     <SectionContainer className="w-full">
-      <div />
-      <section className="flex flex-col items-center justify-center pt-18">
+      <section className="flex flex-col items-center justify-center pt-26">
         <div className="flex flex-col items-center justify-center">
-          <h1 className="max-w-xl text-balance text-center font-semibold text-5xl leading-tight tracking-tight">
-            Subscription management platform for React Native
+          <div className="rounded-full border border-border bg-card px-4 py-1 font-semibold text-muted-foreground text-sm">
+            Closed Alpha Preview - Now Available
+          </div>
+          <h1 className="mt-6 max-w-xl text-balance text-center font-semibold text-5xl leading-tight tracking-tight">
+            Add in-app purchases to React Native in seconds.
           </h1>
-          <p className="mt-4 max-w-lg text-balance text-center text-muted-foreground">
-            Integrate in-app purchases in seconds. Analytics, CRM, Paywalls and
-            more. All in one place, built for developers and open-source.
+          <p className="mt-4 max-w-2xl text-balance text-center text-muted-foreground">
+            Voidhash is an open-source subscription management platform for
+            React Native that allows you to integrate Google Play and App Store
+            purchases with single command.
           </p>
-          <div className="mt-8 flex items-center gap-4">
+          <div className="mt-10 mb-12 flex w-full items-center justify-center gap-4">
+            <form
+              action="https://formspree.io/f/mpwjvpve"
+              aria-label="Join waitlist"
+              className="flex w-full max-w-md flex-col items-center gap-2 rounded-xl border bg-card p-1 sm:flex-row"
+              method="POST"
+            >
+              <label className="sr-only" htmlFor="waitlist-email">
+                Email address
+              </label>
+              <input
+                aria-label="Email address"
+                autoComplete="email"
+                className="flex-1 rounded-md bg-background px-4 py-2 text-base text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none"
+                id="waitlist-email"
+                name="email"
+                placeholder="Enter your email"
+                required
+                type="email"
+              />
+
+              <Button className="w-full sm:w-auto" type="submit">
+                Join Waitlist
+              </Button>
+            </form>
             {/* <Button>
               <span>Get Started</span>
               <ChevronRight className="size-4 opacity-50" />

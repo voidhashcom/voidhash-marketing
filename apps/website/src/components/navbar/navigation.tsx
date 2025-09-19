@@ -1,13 +1,32 @@
-// import { ChevronRight } from 'lucide-react';
+'use client';
+
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { cn } from '@/lib/utils';
 // import { Button } from '../button';
 import { Logo } from '../logo';
 
 export function Navigation() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div>
-      <nav className="fixed top-0 right-0 left-0 z-50 bg-background/50 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-7xl items-center px-4 py-4">
+      <nav
+        className={cn(
+          'fixed top-0 right-0 left-0 z-50 flex h-16 w-full items-center justify-start bg-background backdrop-blur-sm',
+          isScrolled && 'border-border border-b'
+        )}
+      >
+        <div className="mx-auto flex w-full max-w-7xl items-center px-4 py-4">
           <Link href="/">
             <Logo className="h-6" />
           </Link>
@@ -23,7 +42,7 @@ export function Navigation() {
           </div> */}
         </div>
       </nav>
-      <div className="h-18" />
+      <div className="h-16" />
     </div>
   );
 }
