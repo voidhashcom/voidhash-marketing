@@ -1,0 +1,20 @@
+{
+    "$schema": "https://openapi.vercel.sh/microfrontends.json",
+    "applications": {
+        "voidhash-marketing": {
+            "development": {
+                "fallback": "voidhash.com"
+            }
+        },
+        "voidhash-docs": {
+            "routing": [
+                {
+                    "paths": [
+                        "/docs",
+                        "/docs/:path*"
+                    ]
+                }
+            ]
+        }
+    }
+}
