@@ -21,7 +21,7 @@ const nextConfig: NextConfig = {
             value: 'voidhash.com',
           },
         ],
-        destination: 'https://docs.voidhash.com/d/:path*',
+        destination: 'https://docs.voidhash.com/docs/:path*',
       },
     ];
   },
