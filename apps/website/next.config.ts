@@ -9,23 +9,7 @@
 import path from 'node:path';
 import type { NextConfig } from 'next';
 
-const nextConfig: NextConfig = {
-  // biome-ignore lint/suspicious/useAwait: async is required
-  rewrites: async () => {
-    return [
-      {
-        source: '/docs/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'voidhash.com',
-          },
-        ],
-        destination: 'https://docs.voidhash.com/docs/:path*',
-      },
-    ];
-  },
-};
+const nextConfig: NextConfig = {};
 
 if (process.env.NODE_ENV === 'development') {
   nextConfig.outputFileTracingRoot = path.join(__dirname, '../../');
