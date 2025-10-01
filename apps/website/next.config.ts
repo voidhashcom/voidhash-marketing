@@ -14,6 +14,16 @@ const nextConfig: NextConfig = {
   rewrites: async () => {
     return [
       {
+        source: '/docs',
+        has: [
+          {
+            type: 'host',
+            value: 'voidhash.com',
+          },
+        ],
+        destination: 'https://docs.voidhash.com/',
+      },
+      {
         source: '/docs/:path*',
         has: [
           {
@@ -21,7 +31,7 @@ const nextConfig: NextConfig = {
             value: 'voidhash.com',
           },
         ],
-        destination: 'https://docs.voidhash.com/docs/:path*',
+        destination: 'https://docs.voidhash.com/:path*',
       },
     ];
   },
