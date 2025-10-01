@@ -15,23 +15,11 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/docs',
-        has: [
-          {
-            type: 'host',
-            value: 'voidhash.com',
-          },
-        ],
-        destination: 'https://docs.voidhash.com/docs/',
+        destination: 'https://docs.voidhash.com/docs',
       },
       {
         source: '/docs/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'voidhash.com',
-          },
-        ],
-        destination: 'https://docs.voidhash.com/docs/:path*',
+        destination: 'https://docs.voidhash.com/docs/:path+',
       },
     ];
   },
